@@ -51,11 +51,11 @@ hist(stepsbydate$nsteps, xlab = 'Total daily steps',
 ### 3. Mean and median of the total number steps taken per day
 
 ```{r}
-mean(stepsbydate$nsteps)
+mean1 <- mean(stepsbydate$nsteps)
 ```
 
 ```{r}
-median(stepsbydate$nsteps)
+median1 <- median(stepsbydate$nsteps)
 ```
 
 
@@ -130,11 +130,17 @@ hist(stepsbydate2$nsteps,
 Also, recalculate mean and median of the total number steps taken per day.
 
 ```{r}
-mean(stepsbydate2$nsteps)
+mean2 <- mean(stepsbydate2$nsteps)
 ```
 
 ```{r}
-median(stepsbydate2$nsteps)
+median2 <- median(stepsbydate2$nsteps)
+```
+
+Do, the old and new values of mean and median differ?
+
+```{r}
+data.frame(mean_diff = mean2 - mean1, median_diff = median2 - median1)
 ```
 
 ### 8. Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
